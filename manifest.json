@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "YEETPILL", 
+  "version": "1.0.0", 
+  "description": "Youtube Playlist Video-Length Calculator",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "action": {
+    "default_icon": "img.png",
+    "default_title": "Calculate playlist length"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/playlist?*"
+      ], 
+      "js": ["content.js"]
+    }
+  ]
+}
